@@ -2,31 +2,45 @@
 
 These are my notes from the book [Test-Driven Development with Python](https://www.obeythetestinggoat.com/pages/book.html).
 
+I've used the book as a guide, and deviated occasionally.
+
 ## [Prerequisites and Assumptions](https://www.obeythetestinggoat.com/book/pre-requisite-installations.html)
 - The book uses [Python](https://www.python.org/) 3.6 and [Django](https://www.djangoproject.com/) 1.11.
-- I'm using a [Mac](https://en.wikipedia.org/wiki/Macintosh) and [Homebrew](https://brew.sh/).
-- [venv is the general convention used globally.](https://docs.python-guide.org/dev/virtualenvs/#basic-usage)
+- I'm using Python 3.7, Django 1.11, [macOS](https://en.wikipedia.org/wiki/MacOS) 10.15, and [Homebrew](https://brew.sh/) 2.2.
+- ["venv" is the general convention used globally.](https://docs.python-guide.org/dev/virtualenvs/#basic-usage)
+
+First, install dependencies and create the environment.
 ```bash
 # Install Homebrew.
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install caskroom/cask/brew-cask
 
+# Install the project dependencies.
 brew install python3
 brew install geckodriver
 brew cask install firefox
-pip3 install selenium
 
-git init ~/my/project
-cd ~/my/project
+# Create a Git repository.
+git init ~/src/myproject
+cd ~/src/myproject
+
+# Create a virtual environment, in the directory "venv".
 python3 -m venv virtualenv venv
-echo "venv" >> .gitignore
+
+# Create a .gitignore file.
+echo '*.log' >> .gitignore
+echo '*.pyc' >> .gitignore
+echo '__pycache__' >> .gitignore
+echo 'db.sqlite3' >> .gitignore
+echo 'venv' >> .gitignore
 git add .gitignore
+
+# Commit the .gitignore file.
 git commit -m "Add a .gitignore file."
 ```
 
-Activate virtualenv with this command:
+For development and testing, activate virtualenv with this command:
 ```bash
-source virtualenv/bin/activate
+source venv/bin/activate
 ```
 
 Once you've activated the virtualenv, install Django & Selenium:
@@ -34,12 +48,12 @@ Once you've activated the virtualenv, install Django & Selenium:
 pip install "django<1.12" "selenium<4"
 ```
 
-Deactivate virtualenv with this command:
+When you're done with development and testing, deactivate virtualenv:
 ```bash
 deactivate
 ```
 
-[Chapter 1](https://www.obeythetestinggoat.com/book/chapter_01.html)
+## [Chapter 1](https://www.obeythetestinggoat.com/book/chapter_01.html)
 
 Create a new Django project:
 ```bash
