@@ -24,19 +24,19 @@ git add .gitignore
 git commit -m "Add a .gitignore file."
 ```
 
-Activate virtualenv with this command:"
+Activate virtualenv with this command:
 ```bash
-source virtualenv/bin/activate"
+source virtualenv/bin/activate
 ```
 
-Once you've activated the virtualenv, install Django & Selenium:"
+Once you've activated the virtualenv, install Django & Selenium:
 ```bash
-pip install "django<1.12" "selenium<4"'
+pip3 install "django<1.12" "selenium<4"
 ```
 
-Deactivate virtualenv with this command:"
+Deactivate virtualenv with this command:
 ```bash
-deactivate"
+deactivate
 ```
 
 [Obey the testing goat!](https://www.obeythetestinggoat.com/book/chapter_01.html)
