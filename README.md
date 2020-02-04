@@ -3,7 +3,7 @@
 These are my notes from the book [Test-Driven Development with Python](https://www.obeythetestinggoat.com/pages/book.html).
 
 ## [Prerequisites and Assumptions](https://www.obeythetestinggoat.com/book/pre-requisite-installations.html)
-- The book uses Python 3.6 and Django 1.11.
+- The book uses [Python](https://www.python.org/) 3.6 and [Django](https://www.djangoproject.com/) 1.11.
 - I'm using a [Mac](https://en.wikipedia.org/wiki/Macintosh) and [Homebrew](https://brew.sh/).
 - [venv is the general convention used globally.](https://docs.python-guide.org/dev/virtualenvs/#basic-usage)
 ```bash
@@ -31,7 +31,7 @@ source virtualenv/bin/activate
 
 Once you've activated the virtualenv, install Django & Selenium:
 ```bash
-pip3 install "django<1.12" "selenium<4"
+pip install "django<1.12" "selenium<4"
 ```
 
 Deactivate virtualenv with this command:
@@ -39,7 +39,22 @@ Deactivate virtualenv with this command:
 deactivate
 ```
 
-[Obey the testing goat!](https://www.obeythetestinggoat.com/book/chapter_01.html)
+[Chapter 1](https://www.obeythetestinggoat.com/book/chapter_01.html)
+
+Create a new Django project:
+```bash
+django-admin startproject myproject .
+```
+
+Start a web server:
+```bash
+python manage.py runserver
+```
+
+Run my functional tests.
+```bash
+python functional_tests.py
+```
 
 ## License
 
