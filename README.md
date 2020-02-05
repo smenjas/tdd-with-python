@@ -53,7 +53,7 @@ When you're done with development and testing, deactivate virtualenv:
 deactivate
 ```
 
-## [Chapter 1](https://www.obeythetestinggoat.com/book/chapter_01.html)
+## [Chapter 1: Getting Django Set Up Using a Functional Test](https://www.obeythetestinggoat.com/book/chapter_01.html)
 
 Create a new Django project:
 ```bash
@@ -69,6 +69,8 @@ Run my functional tests.
 ```bash
 python functional_tests.py
 ```
+
+## [Chapter 2: Extending Our Functional Test Using the unittest Module](https://www.obeythetestinggoat.com/book/chapter_02_unittest.html)
 
 ## License
 
